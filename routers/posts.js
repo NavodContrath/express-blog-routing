@@ -21,3 +21,7 @@ router.put('/:slug', (req, res) => {
 router.patch('/:slug', (req, res) => {
     res.send(`modify post wth slug:${req.params.slug}`)
 })
+//delete
+router.delete('/:slug', (req, res) => {
+    res.send(`delete post with slug:${req.params.slug}`)
+})
