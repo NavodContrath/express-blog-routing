@@ -25,3 +25,4 @@ router.patch('/:slug', (req, res) => {
 router.delete('/:slug', (req, res) => {
     res.send(`delete post with slug:${req.params.slug}`)
 })
+module.exports = router
