@@ -9,8 +9,10 @@ router.get('/', (req, res) => {
 //byId(show)
 router.get('/:slug', (req, res) => {
     posts.forEach((post) => {
-        if (req.params.slug === post.slug) {
+        if (req.params.slug == post.slug) {
             res.json(post)
+        } else {
+            res.send("item not in database")
         }
     })
 })
