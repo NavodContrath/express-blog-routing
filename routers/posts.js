@@ -9,3 +9,7 @@ router.get('/', (req, res) => {
 router.get('/:slug', (req, res) => {
     res.send(`show post with slug:${req.params.slug}`)
 })
+//store(create)
+router.post('/', (req, res) => {
+    res.send("store post in server")
+})
