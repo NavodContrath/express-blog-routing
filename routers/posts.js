@@ -17,3 +17,7 @@ router.post('/', (req, res) => {
 router.put('/:slug', (req, res) => {
     res.send(`update post with slug:${req.params.slug}`)
 })
+//modify(partially update)
+router.patch('/:slug', (req, res) => {
+    res.send(`modify post wth slug:${req.params.slug}`)
+})
