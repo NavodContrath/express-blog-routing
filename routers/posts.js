@@ -1,7 +1,6 @@
 const express = require('express')
 const router = express.Router()
 const posts = require('../posts')
-
 //index
 router.get('/', (req, res) => {
     res.json(posts)
@@ -9,7 +8,6 @@ router.get('/', (req, res) => {
 //byId(show)
 router.get('/:slug', (req, res) => {
     posts.forEach((post) => {
-        console.log(post.slug)
         if (req.params.slug === post.slug) {
             res.json(post)
         } else ('item not in database')
