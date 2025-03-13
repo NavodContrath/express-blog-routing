@@ -1,13 +1,18 @@
 const express = require('express')
 const router = express.Router()
+const posts = require('../posts')
 
 //index
 router.get('/', (req, res) => {
-    res.send("send all posts")
+    res.json(posts)
 })
 //byId(show)
 router.get('/:slug', (req, res) => {
-    res.send(`show post with slug:${req.params.slug}`)
+    posts.forEach((post) => {
+        if (req.params.slug === post.slug) {
+            res.json(post)
+        }
+    })
 })
 //store(create)
 router.post('/', (req, res) => {
