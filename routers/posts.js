@@ -13,3 +13,7 @@ router.get('/:slug', (req, res) => {
 router.post('/', (req, res) => {
     res.send("store post in server")
 })
+//update
+router.put('/:slug', (req, res) => {
+    res.send(`update post with slug:${req.params.slug}`)
+})
