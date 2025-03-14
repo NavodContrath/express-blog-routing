@@ -7,11 +7,12 @@ router.get('/', (req, res) => {
 })
 //byId(show)
 router.get('/:slug', (req, res) => {
-    posts.forEach((post) => {
+    let post = posts.find((post) => {
         if (req.params.slug === post.slug) {
-            res.json(post)
-        } else ('item not in database')
+            return post
+        }
     })
+    res.json(post)
 })
 //store(create)
 router.post('/', (req, res) => {
